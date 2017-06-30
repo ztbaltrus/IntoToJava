@@ -1,0 +1,77 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
+
+public class OOP_Demo {
+
+	public static void main(String[] args) {
+		
+		int myYear = 2015;
+		
+		Car car1 = new Car(myYear, "Jeep", "Grand Cherokee", "Burnt Orange", false); 
+		
+		Car car2 = new Car(2004, "Ford", "Mustang");
+		car2.setColor("Red");
+		car2.setVintage(false);
+		
+		Car car3 = new Car();
+		car3.setYear(2015);
+		car3.setMake("Mazda");
+		car3.setModel("Mazda3");
+		car3.setColor("Brown");
+		
+		
+		//how to get methods
+		System.out.println("Car 3 is: " + //Preferred method
+		car3.getYear()+ " " + car3.getMake() + 
+		" " + car3.getModel());
+		
+		System.out.println("Car 2 is: " + //Not the preferred method
+				car2.year+ " " + car2.make + 
+				" " + car2.model);
+		
+		
+		
+		Car[] cars = new Car[]{car1, car2, car3};
+		
+		//Cars in ArrayList
+		ArrayList<Car> carList = new ArrayList<Car>();
+		carList.add( car1 );
+		carList.add( car2 );
+		carList.add( car3 );
+		
+		carList.size();
+		
+		System.out.println("Before");
+		for(Car car: carList){
+			System.out.println("Car is: " + //Preferred method
+					car.getYear()+ " " + car.getMake() + 
+					" " + car.getModel());
+		}
+		System.out.println("After");
+		carList.remove(car3);
+		for(Car car: carList){
+			System.out.println("Car is: " + //Preferred method
+					car.getYear()+ " " + car.getMake() + 
+					" " + car.getModel());
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		Date today = new Date();
+		
+		long time = today.getTime();
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(today);
+		
+		int calYear = calendar.get(Calendar.YEAR);
+		System.out.println(calYear);
+		System.out.println("Today is " + calendar.getTime());
+	}
+}
