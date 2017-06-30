@@ -1,0 +1,98 @@
+import java.util.Date;
+
+public class Car {
+	
+	//fields or attributes
+	public String color;//the default value is null
+	public String make;//null
+	public int year;// default value is 0
+	public String model;// null
+	public boolean isVintage; //Before 1990
+	public Date registrationDate;
+	
+	
+	//Constructors
+	public Car() {//if nothing is set
+	}
+	
+	/**Construct a car
+	 * 
+	 * @param x 	Cars years
+	 * @param y 	Car make
+	 * @param z 	Car model
+	 */
+	public Car(int x, String y, String z){
+		year = x;
+		make = y;
+		model = z;
+		}
+	
+	public Car(int year, String make, String model, String color,boolean isVintage){
+		this.year = year;
+		this.make = make;
+		this.model = model;
+		this.color = color;
+		this.isVintage = isVintage;
+	}
+	
+	
+	//Methods
+	
+	public void setYear(int year){
+		this.year = year;
+	}
+	
+	public int getYear(){
+		return this.year;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public String getMake() {
+		return make;
+	}
+
+	public void setMake(String make) {
+		this.make = make;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public boolean isVintage() {
+		return isVintage;
+	}
+
+	public void setVintage(boolean isVintage) {
+		this.isVintage = isVintage;
+	}
+	
+	public Date getRegistrationDate() {
+		return registrationDate;
+	}
+
+	public void setRegistrationDate(Date registrationDate) {
+		this.registrationDate = registrationDate;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+
+	public double caluclateMPG(){
+		//TODO - add code to get MPG
+		return 0;
+	}
+}
